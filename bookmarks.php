@@ -209,7 +209,7 @@ function getRows($parent_id = null)
 		if ($row['url'] == null) 
 			print "$indenting\t\t<span>{$row['description']}</span>";
 		else
-			print "$indenting\t\t<a href=\"{$row['url']}\">{$row['description']}</a>";
+			print "$indenting\t\t<a href=\"{$row['url']}\" rel=\"noreferrer\">{$row['description']}</a>";
 		
 		print "<div class=\"actionBox\">=><span><a href=\"{$_SERVER['PHP_SELF']}?action=add&parent_id={$row['id']}\">add</a>/<a href=\"{$_SERVER['PHP_SELF']}?action=edit&id={$row['id']}\">edit</a>/<a href=\"{$_SERVER['PHP_SELF']}?action=delete&id={$row['id']}\">remove</a></span></div> \n";
 
